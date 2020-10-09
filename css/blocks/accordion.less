@@ -1,0 +1,115 @@
+//main: ../style.less
+
+.accordion__item {
+    border-top: 1px solid #999999;
+    &:first-child {
+        border-top: 0;
+    }
+
+    &.active {
+        border-top: 0;
+
+        .accordion__header {
+            border-radius: 0;
+            background: linear-gradient(180deg, #5F72BE 0%, #9921E8 100%);
+        }
+
+        .accordion__title {
+            color: @white;
+        }
+
+        .accordion__chevron {
+            transform: rotateX(180deg);
+
+            &:hover {
+                transform: rotateX(360deg);
+            }
+
+            & svg {
+                fill: @white;
+            }
+        }
+
+        .accordion__content {
+            display: block;
+        }
+    }
+}
+
+.accordion__header {
+    &.active {
+        border-radius: 0;
+        background: linear-gradient(180deg, #5F72BE 0%, #9921E8 100%);
+        &:hover {
+            background: linear-gradient(180deg, #5F72BE 0%, #9921E8 100%);
+        }
+
+        .accordion__title {
+            color: @white;
+        }
+
+        .accordion__chevron {
+            transform: rotateX(180deg);
+
+            &:hover {
+                transform: rotateX(360deg);
+            }
+
+            & svg {
+                fill: @white;
+            }
+        }
+
+        .accordion__content {
+            display: block;
+        }
+    }
+
+    cursor: pointer;
+    padding: 30px;
+
+    border-radius: 35px 35px 0px 0px;
+
+    background: transparent;
+    &:hover {
+        background: linear-gradient(93.58deg, #7187DD 0%, #C78AEF 100%);
+
+        .accordion__title {
+            color: @white;
+        }
+
+        .accordion__chevron {
+            & svg {
+                fill: @white;
+            }
+        }
+    }
+
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.accordion__title {
+    font-size: 18px;
+    font-weight: 700;
+
+    color: @black;
+}
+
+.accordion__chevron {
+    &:hover {
+        transform: rotateX(180deg);
+    }
+
+    & svg {
+        fill: @black;
+        width: 20.5px;
+        height: 27.5px;
+    }
+}
+
+.accordion__content {
+    display: none;
+}
